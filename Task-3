@@ -1,1 +1,40 @@
+Given below is a Bash / Python script that performs following computation on an integer input (n):
+If n is less than 10: Calculate its Square
+Example: 4 => 16
+If n is between 10 and 20: Calculate the factorial of (n-10)
+Example: 15 => 120
+If n is greater than 20: Calculate the sum of all integers between 1 and (n-20)
+Example: 25 => 15
+
+
+Answer:-
+
+The provided Bash and Python scripts contain a bug in the factorial calculation section. 
+To fix it, you need to change the comparison operator "<" to "<=" in the loop condition.
+Here's the corrected version of the script:
+
+def compute(n):
+    if n < 10:
+        out = n ** 2
+    elif n < 20:
+        out = 1
+   # Change the loop range to n-10+1
+        for i in range(1, n-10+1): 
+  
+            out *= i
+    else:
+        lim = n - 20
+        out = lim * lim
+        out = out - lim
+        out = out / 2 
+    print(out)
+
+
+n = int(input("Enter an integer: "))
+
+
+
+
+
+
 
