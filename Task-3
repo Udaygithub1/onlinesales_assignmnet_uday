@@ -9,18 +9,21 @@ Example: 25 => 15
 
 Answer:-
 
-The provided Bash and Python scripts contain a bug in the factorial calculation section. 
-To fix it, you need to change the comparison operator "<" to "<=" in the loop condition.
-Here's the corrected version of the script:
+# The provided Bash and Python scripts contain a bug in the factorial calculation section. 
+# To fix the bug in the Python script, you need to change the range in the for loop to range(1, n-10+1). 
+# The upper limit should be n-10+1 to include the last value in the range.
+
 
 def compute(n):
     if n < 10:
         out = n ** 2
     elif n < 20:
         out = 1
-   # Change the loop range to n-10+1
-        for i in range(1, n-10+1): 
-  
+# here we can change range from n-10 to n-10+1 and for understanding
+# The purpose of this loop is to calculate the factorial of (n-10). The range specified in the loop is correct, starting from 1 and iterating up to (n-10)-1.
+# For example, if n = 15, the loop should iterate from 1 to 4 (excluding 5) because (n-10) is equal to 5.
+        for i in range(1, n-10+1):
+# or we can also use range(1, n-9)
             out *= i
     else:
         lim = n - 20
@@ -31,7 +34,7 @@ def compute(n):
 
 
 n = int(input("Enter an integer: "))
-
+compute(n)
 
 
 
