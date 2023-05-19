@@ -9,7 +9,7 @@ In the attachment, use each worksheet as a table in a relational database and wr
 
 Answer:-
 
-Assuming we have three tables named Departments, Employees, and Salaries, with the appropriate columns, you can use the following SQL 
+here we have three tables named Departments, Employees, and Salaries, with the appropriate columns, you can use the following SQL 
 query to fetch the top 3 departments along with their names and average monthly salaries:
 
 SELECT DEPT_NAME, AVG(MONTHLY_SALARY) AS AVG_MONTHLY_SALARY
